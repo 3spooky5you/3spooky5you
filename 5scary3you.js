@@ -22,26 +22,35 @@ if (Meteor.isClient) {
   Template.spookiness.helpers ({
     spookyWords: function () {
       count = Counts.get("spooks");
-      words = "a little spooky";
+      words = "lets get spooky";
       if (count > 10) {
-        words = "spooky spooky eek";
+        words = "2 spooky 4 me";
       }
       if (count > 20) {
-        words = "spooky scary ooooh";
+        words = "3 spooky 5 me";
       }
       if (count > 30) {
-        words = "spooky scary scary";
+        words = "2 spoopy 4 me";
       }
       if (count > 50) {
-        words = "very very spooky scary";
+        words = "a skeleton can do better";
+      }
+      if (count > 70) {
+        words = "ᐃ";
+      }
+      if (count > 90){
+        words = "u so spooky";
+      }
+      if (count > 100){
+        words = "spooky scary skeleton time!!!!!!!!!!!!!!!!";
+      }
+      if (count > 150){
+        words = "spookiness intensifies";
       }
       return words;
     }
   });
 }
-
-
-
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
