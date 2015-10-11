@@ -1,0 +1,55 @@
+# -*- mode: gitignore; -*-
+
+# emacs artifacts
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
+# Meteor stuff
+.meteor/local
+.meteor/meteorite
+settings.json
+*_settings.json
+
+# Environment variables
+env_local.sh
+env_production.sh
+
+/bundle
+
+*~
+*#
+
+#mac artifacts
+.directory
+.dsstore
+.thumbs
+.thumbnails

@@ -1,0 +1,29 @@
+<head>
+  <title>3scary5you</title>
+  <link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Creepster' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <h1>{{> spookiness}}</h1>
+    {{> ghost}}
+    {{> hello}}
+  </div>
+  <div class="footer">
+    <p>Made with &#9829; in Indianapolis by <a href="http://github.com/catbat1234">kris10</a> and <a href="http://github.com/indymike">indymike</a> for the <a href="http://meteor.com">2015 Meteor Global Hackathon</a></p> 
+  </div>
+</body>
+
+<template name="hello">
+  <button>Spook Me</button>
+  <p>{{counter}} spooks.</p>
+  <p>spookicity {{getPublishedCount 'spooks'}}</p>
+</template>
+
+<template name="ghost">
+  <div class="ghost">&#x1f47b;</div>
+</template>
+
+<template name="spookiness">
+  It's {{spookyWords}}...
+</template>

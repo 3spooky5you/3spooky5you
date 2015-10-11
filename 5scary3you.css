@@ -1,0 +1,45 @@
+/* CSS declarations go here */
+
+body {
+  background-color: black;
+  color: orange;
+}
+
+h1 {
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 32pt;
+}
+
+button {
+  border: 2px solid orange;
+  font-family: Creepster, cursive;
+  border-radius: 6px;
+  font-size: 24pt;
+  background-color: orange;
+  color: black;
+  height: 48pt;
+
+}
+
+.ghost {
+  font-size: 90px;
+}
+
+.container {
+  text-align: center;
+}
+
+p {
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 18pt;
+}
+
+.footer p {
+  font-size: 10pt;
+  text-align: center;
+  color: grey;
+}
+
+.footer p a{
+  color: orange;
+}
