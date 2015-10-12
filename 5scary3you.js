@@ -24,14 +24,21 @@ if (Meteor.isClient) {
     scaryContent: function () {
       count = Counts.get("spooks");
       content = "Boo"
-      if (count > 10){
-        content = "ghost"
-      }
-      if (count > 25){
+      if (count > 1){
+      if (count > 20) {
         content = "zombie!"
       }
       if (count > 100) {
         content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+      }
+      if (count > 50) {
+         content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XTgFtxHhCQ0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+      }
+      if (count > 100){
+        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/Zd04SwR2eU8autoplay=1" frameborder="0" allowfullscreen></iframe>'
+      }
+      if (count > 150){
+        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/NV4xo_rF-ooautoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
       return content;
     }
@@ -44,26 +51,32 @@ if (Meteor.isClient) {
       if (count > 10) {
         words = "2 spooky 4 me";
       }
-      if (count > 20) {
-        words = "3 spooky 5 me";
+      if (count > 50) {
+        words = "A skeleton can do better!";
       }
-      if (count > 30) {
+      if (count > 100) {
         words = "2 spoopy 4 me";
       }
-      if (count > 50) {
+      if (count > 150) {
         words = "a skeleton can do better";
       }
-      if (count > 70) {
-        words = "ᐃ";
+      if (count > 200) {
+        words = "SPOOKY SKELETON TIME!!!!";
       }
-      if (count > 90){
+      if (count > 250){
         words = "u so spooky";
       }
-      if (count > 100){
-        words = "spooky scary skeleton time!!!!!!!!!!!!!!!!";
+      if (count > 300){
+        words = "ᐃ";
       }
-      if (count > 150){
+      if (count > 350){
         words = "spookiness intensifies";
+      }
+      if (count > 400){
+        words = "wow ur spooky"
+      }
+      if (count > 450){
+        words = "soooo spooky"
       }
       return words;
     }
