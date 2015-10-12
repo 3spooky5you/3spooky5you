@@ -18,12 +18,18 @@
 <template name="hello">
   <button>Spook Me</button>
   <p>{{counter}} spooks.</p>
-  <p>spookicity {{getPublishedCount 'spooks'}}</p>
+  <p>spookyometer {{getPublishedCount 'spooks'}}</p>
 </template>
 
 <template name="ghost">
   <div class="scaryContent">{{{scaryContent}}}</div>
 </template>
+
+<template name="leader">
+  <span class="user">{{user}}</span><br>
+</template>
+
+
 
 <template name="spookiness">
    {{spookyWords}}...
