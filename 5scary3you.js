@@ -19,7 +19,21 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.spookiness.helpers ({
+  Template.ghost.helpers({
+    scaryContent: function () {
+      count = Counts.get("spooks");
+      content = "Boo"
+      if (count > 10){
+        content = "ghost"
+      }
+      if (count > 20) {
+        content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+      }
+      return content;
+    }
+  });
+
+  Template.spookiness.helpers({
     spookyWords: function () {
       count = Counts.get("spooks");
       words = "lets get spooky";
@@ -51,6 +65,7 @@ if (Meteor.isClient) {
     }
   });
 }
+
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
