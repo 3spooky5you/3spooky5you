@@ -5,6 +5,7 @@
 
 <body>
   <div class="container">
+     {{> loginButtons}}
     <h1>{{> spookiness}}</h1>
     {{> ghost}}
     {{> hello}}
@@ -21,7 +22,7 @@
 </template>
 
 <template name="ghost">
-  <div class="ghost">&#x1f47b;</div>
+  <div class="scaryContent">{{{scaryContent}}}</div>
 </template>
 
 <template name="spookiness">
