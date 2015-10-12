@@ -23,22 +23,17 @@ if (Meteor.isClient) {
   Template.ghost.helpers({
     scaryContent: function () {
       count = Counts.get("spooks");
-      content = "Boo"
-      if (count > 1){
-      if (count > 20) {
-        content = "zombie!"
-      }
-      if (count > 100) {
+      if (count >= 0){
         content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
       }
       if (count > 50) {
          content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XTgFtxHhCQ0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
       if (count > 100){
-        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/Zd04SwR2eU8autoplay=1" frameborder="0" allowfullscreen></iframe>'
+        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/Zd04SwR2eU8?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
       if (count > 150){
-        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/NV4xo_rF-ooautoplay=1" frameborder="0" allowfullscreen></iframe>'
+        content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/NV4xo_rF-oo?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
       return content;
     }
