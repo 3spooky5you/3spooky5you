@@ -9,7 +9,7 @@ if (Meteor.isClient) {
   });
 
   Template.hello.events({
-    'click button': function () {
+    'click button': function () {content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       // increment the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1);
       id = spooks.insert({
@@ -24,12 +24,15 @@ if (Meteor.isClient) {
     scaryContent: function () {
       count = Counts.get("spooks");
       if (count >= 0){
-        content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        content = '<img src="pacman.gif">'
       }
-      if (count > 50) {
+      if (count > 10){
+        content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+      }
+      if (count > 50){
          content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/XTgFtxHhCQ0?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
-      if (count > 100){
+      if (count > 75){
         content = '<iframe width="420" height="315" src="https://www.youtube.com/embed/Zd04SwR2eU8?autoplay=1" frameborder="0" allowfullscreen></iframe>'
       }
       if (count > 150){
@@ -46,13 +49,13 @@ if (Meteor.isClient) {
       if (count > 10) {
         words = "2 spooky 4 me";
       }
-      if (count > 50) {
+      if (count > 25) {
         words = "A skeleton can do better!";
       }
-      if (count > 100) {
+      if (count > 75) {
         words = "2 spoopy 4 me";
       }
-      if (count > 150) {
+      if (count > 100) {
         words = "a skeleton can do better";
       }
       if (count > 200) {

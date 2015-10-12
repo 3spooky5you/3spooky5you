@@ -43,3 +43,8 @@ p {
 .footer p a{
   color: orange;
 }
+
+.scaryContent {
+  height: 315px;
+  vertical-align: middle;
+}
