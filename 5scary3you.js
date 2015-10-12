@@ -13,9 +13,10 @@ if (Meteor.isClient) {
       // increment the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1);
       id = spooks.insert({
-        "created": new Date ()
+        "created": new Date (),
+        "user": Meteor.user().profile.name,
+        "userId": Meteor.userId()
       });
-      console.log(id)
     }
   });
 
@@ -26,7 +27,10 @@ if (Meteor.isClient) {
       if (count > 10){
         content = "ghost"
       }
-      if (count > 20) {
+      if (count > 25){
+        content = "zombie!"
+      }
+      if (count > 100) {
         content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
       }
       return content;
@@ -65,7 +69,6 @@ if (Meteor.isClient) {
     }
   });
 }
-
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
