@@ -24,7 +24,7 @@ if (Meteor.isClient) {
     scaryContent: function () {
       count = Counts.get("spooks");
       if (count >= 0){
-        content = '<img src="pacman.gif">'
+        content = '<img src="pacman.gif">';
       }
       if (count > 10){
         content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/n_qbGJuxCYY?autoplay=1" frameborder="0" allowfullscreen></iframe>'

@@ -21,6 +21,10 @@ button {
 
 }
 
+.help {
+  font-size: 12pt;
+  color: grey;
+}
 .ghost {
   font-size: 90px;
 }

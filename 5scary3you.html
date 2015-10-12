@@ -1,11 +1,12 @@
 <head>
-  <title>3scary5you</title>
+  <title>3spooky5you</title>
   <link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Creepster' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <div class="container">
-     {{> loginButtons}}
+    {{> loginButtons}}
+    {{#unless currentUser}}<p class="help">(no login, no spookyometer)</p>{{/unless}}
     <h1>{{> spookiness}}</h1>
     {{> ghost}}
     {{> hello}}
